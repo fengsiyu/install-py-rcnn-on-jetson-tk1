@@ -27,6 +27,10 @@ cp Makefile.config.example Makefile.config
 sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
 sed -i '/^# WITH_PYTHON_LAYER := 1/s/^# //' Makefile.config
 
+echo "export CAFFE_ROOT=$(pwd)" >> ~/.bashrc
+echo 'export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH' >> ~/.bashrc
+ipython caffe
+
 
 wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/Makefile.config
 
