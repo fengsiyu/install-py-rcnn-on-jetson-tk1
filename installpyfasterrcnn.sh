@@ -16,12 +16,16 @@ sudo make PREFIX=/usr/local/ install
 
 
 
+
 #install caffe 
 cd ~
 git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
 cd py-faster-rcnn
 wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/Makefile.config
 
+# install setuptools for make $FRCN_ROOT/lib
 
+wget --no-check-certificate https://bootstrap.pypa.io/ez_setup.py
+sudo python ez_setup.py --insecure
 
 
