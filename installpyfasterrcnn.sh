@@ -24,6 +24,8 @@ cd py-faster-rcnn
 git clone https://github.com/rbgirshick/caffe-fast-rcnn.git
 cd caffe-fast-rcnn
 cp Makefile.config.example Makefile.config
+sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
+sed -i '/^# WITH_PYTHON_LAYER := 1/s/^# //' Makefile.config
 
 
 wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/Makefile.config
