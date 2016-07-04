@@ -30,6 +30,9 @@ sed -i '/^# WITH_PYTHON_LAYER := 1/s/^# //' Makefile.config
 echo "export CAFFE_ROOT=$(pwd)" >> ~/.bashrc
 echo 'export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH' >> ~/.bashrc
 ipython caffe
+build/tools/caffe time –model=models/bvlc_alexnet/deploy.prototxt –gpu=0 
+
+sudo pip install Cython
 
 
 wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/Makefile.config
