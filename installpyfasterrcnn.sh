@@ -21,6 +21,11 @@ sudo make PREFIX=/usr/local/ install
 cd ~
 git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
 cd py-faster-rcnn
+git clone https://github.com/rbgirshick/caffe-fast-rcnn.git
+cd caffe-fast-rcnn
+cp Makefile.config.example Makefile.config
+
+
 wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/Makefile.config
 
 # install setuptools for make $FRCN_ROOT/lib
