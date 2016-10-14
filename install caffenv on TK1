@@ -15,6 +15,9 @@ sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
 sed -i '/^# WITH_PYTHON_LAYER := 1/s/^# //' Makefile.config
 sed -i '/^PYTHON_INCLUDE/a    /usr/local/lib/python2.7/dist-packages/numpy/core/include/ \\' Makefile.config
 
+#const size_t LMDB_MAP_SIZE = 1099511627776;  // 1 TB
+#536870912
+
 mkdir build &&
 cd build &&
 cmake ..
