@@ -11,7 +11,8 @@ cat $CAFFE_ROOT/python/requirements.txt | xargs -n1 sudo pip install
 cd $CAFFE_ROOT
 
 cp Makefile.config.example Makefile.config
-sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
+#run without cudnn
+#sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
 sed -i '/^# WITH_PYTHON_LAYER := 1/s/^# //' Makefile.config
 sed -i '/^PYTHON_INCLUDE/a    /usr/local/lib/python2.7/dist-packages/numpy/core/include/ \\' Makefile.config
 
