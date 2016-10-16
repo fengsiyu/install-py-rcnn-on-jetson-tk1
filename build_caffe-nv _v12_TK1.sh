@@ -1,3 +1,12 @@
+#https://github.com/NVIDIA/caffe/wiki/Versions
+#Version 	 	cuDNN
+#0.10 	 	v2
+#0.11 	 	v2
+#0.12 	 	v2
+#0.13 	 	v3
+#Jetson Tk1 with Jetpack 2.2.1. include only CUDA 6.5.53 and cuDNN v2.0 so it is require caffe-nv Version 0.12 or older
+
+
 
 sudo apt-get install --no-install-recommends git graphviz python-dev python-flask python-flaskext.wtf python-gevent python-h5py python-numpy python-pil python-pip python-protobuf python-scipy
 
