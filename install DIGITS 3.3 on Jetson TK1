@@ -1,0 +1,26 @@
+#!/bin/bash
+
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install -y linux-image-extra-`uname -r`
+
+sudo apt-get install --no-install-recommends git graphviz python-dev python-flask python-flaskext.wtf python-gevent python-h5py python-numpy python-pil python-pip python-protobuf python-scipy
+
+
+
+# example location - can be customized
+DIGITS_ROOT=~/digits
+git clone https://github.com/NVIDIA/DIGITS.git $DIGITS_ROOT
+
+sudo pip install -r $DIGITS_ROOT/requirements.txt
+sudo pip install -e $DIGITS_ROOT
+
+./digits-devserver
+
+
+
+#tray
+http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64/digits_4.0.0-1_amd64.deb
+DIG=digits_4.0.0-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64/${CUDA_REPO_PKG} -O /tmp/${DIG}
+sudo dpkg -i /tmp/${DIG}
+rm -f /tmp/${DIG}
