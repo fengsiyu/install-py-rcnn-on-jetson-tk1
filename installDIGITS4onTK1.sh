@@ -45,7 +45,7 @@ mv DIGITS-4.0.0 digits
 #unzip v5.0.0-rc.1.zip
 #mv DIGITS-5.0.0-rc.1 digits
 
-sudo pip install --upgrade --no-deps --force-reinstall -r $DIGITS_ROOT/requirements.txt
+#sudo pip install --upgrade --no-deps --force-reinstall -r $DIGITS_ROOT/requirements.txt
 sudo pip install -r $DIGITS_ROOT/requirements.txt
 #cd $DIGITS_ROOT
 #wget https://raw.githubusercontent.com/NVIDIA/DIGITS/master/setup.py
