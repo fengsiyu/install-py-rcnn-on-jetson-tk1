@@ -31,10 +31,3 @@ sudo pip install -e $DIGITS_ROOT
 
 ./digits-devserver
 
-
-
-#tray
-DIG=digits_3.0.0-1_amd64.deb
-wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64/${CUDA_REPO_PKG} -O /tmp/${DIG}
-sudo dpkg -i /tmp/${DIG}
-rm -f /tmp/${DIG}
