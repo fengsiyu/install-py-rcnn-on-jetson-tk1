@@ -16,7 +16,9 @@ export CAFFE_HOME=${HOME}/caffe
 git clone -b caffe-0.12 --single-branch https://github.com/teler/caffe.git $CAFFE_HOME
 
 cd $CAFFE_HOME
-pip install -r python/requirements.txt
+sudo pip install -r python/requirements.txt
+
+sudo apt install cmake
 
 mkdir build
 cd build
