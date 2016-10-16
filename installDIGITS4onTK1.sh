@@ -51,7 +51,8 @@ sudo pip install -r $DIGITS_ROOT/requirements.txt
 sudo pip install -e $DIGITS_ROOT #no work
 
 sudo pip install jupyter
-cd $DIGITS_ROOT
-./digits-devserver
+sudo sutdown -h now
+#cd $DIGITS_ROOT
+#./digits-devserver
 
 
