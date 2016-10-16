@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+#https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/install%20DIGITS%204%20on%20TK1.sh
 #chmod +777 install DIGITS 4 on TK1.sh
 
 sudo apt-get update && sudo apt-get -y upgrade
