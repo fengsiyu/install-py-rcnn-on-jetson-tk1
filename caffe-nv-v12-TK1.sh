@@ -22,6 +22,7 @@ sudo apt-get install python-numpy
 sudo usermod -a -G video $USER
 
 export CAFFE_ROOT=~/caffe
+git clone git@github.com:teler/caffe.git -b caffe-0.12 --single-branch
 git clone --branch v0.12.0 https://github.com/teler/caffe.git $CAFFE_ROOT 
 
 sudo pip install -r $CAFFE_ROOT/python/requirements.txt
