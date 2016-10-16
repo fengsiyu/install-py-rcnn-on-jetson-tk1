@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#chmod +777 
+#chmod +777 install DIGITS 4 on TK1.sh
 
 sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install -y linux-image-extra-`uname -r`
