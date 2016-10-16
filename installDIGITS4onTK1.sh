@@ -1,6 +1,6 @@
 #!/bin/bash
-#https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/install%20DIGITS%204%20on%20TK1.sh
-#chmod +777 install DIGITS 4 on TK1.sh
+#wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/installDIGITS4onTK1.sh
+#chmod +777 installDIGITS4onTK1.sh
 
 sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install -y linux-image-extra-`uname -r`
@@ -24,16 +24,12 @@ cmake ..
 make --jobs=4
 
 
-
-cd ~
-DIGITS_ROOT=~/digits
-wget https://github.com/NVIDIA/DIGITS/archive/v3.3.0.zip
-unzip v3.3.0.zip
-mv DIGITS-3.3.0 digits
-
-
-
-
+#Install digits
+#cd ~
+#DIGITS_ROOT=~/digits
+#wget https://github.com/NVIDIA/DIGITS/archive/v3.3.0.zip
+#unzip v3.3.0.zip
+#mv DIGITS-3.3.0 digits
 
 cd ~
 DIGITS_ROOT=~/digits
@@ -41,20 +37,17 @@ wget https://github.com/NVIDIA/DIGITS/archive/v4.0.0.zip
 unzip v4.0.0.zip
 mv DIGITS-4.0.0 digits
 
-
-cd ~
-DIGITS_ROOT=~/digits
-wget https://github.com/NVIDIA/DIGITS/archive/v5.0.0-rc.1.zip
-unzip v5.0.0-rc.1.zip
-mv DIGITS-5.0.0-rc.1 digits
+#cd ~
+#DIGITS_ROOT=~/digits
+#wget https://github.com/NVIDIA/DIGITS/archive/v5.0.0-rc.1.zip
+#unzip v5.0.0-rc.1.zip
+#mv DIGITS-5.0.0-rc.1 digits
 
 sudo pip install --upgrade --no-deps --force-reinstall -r $DIGITS_ROOT/requirements.txt
 sudo pip install -r $DIGITS_ROOT/requirements.txt
-cd $DIGITS_ROOT
-wget https://raw.githubusercontent.com/NVIDIA/DIGITS/master/setup.py
-cd ~
+#cd $DIGITS_ROOT
+#wget https://raw.githubusercontent.com/NVIDIA/DIGITS/master/setup.py
+#cd ~
 sudo pip install -e $DIGITS_ROOT #no work
 
-
 ./digits-devserver
-
