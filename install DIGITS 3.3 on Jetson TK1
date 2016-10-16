@@ -5,9 +5,28 @@ sudo apt-get install -y linux-image-extra-`uname -r`
 
 sudo apt-get install --no-install-recommends git graphviz python-dev python-flask python-flaskext.wtf python-gevent python-h5py python-numpy python-pil python-pip python-protobuf python-scipy
 
+#Install Caffe
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler libatlas-base-dev
+sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get install python-dev python-pip python-numpy gfortran
+
+export CAFFE_HOME=${HOME}/caffe
+git clone -b caffe-0.12 --single-branch https://github.com/teler/caffe.git $CAFFE_HOME
+
+cd $CAFFE_HOME
+pip install -r python/requirements.txt
 
 
-# example location - can be customized
+cd $CAFFE_HOME
+mkdir build
+cd build
+cmake \
+  -DCUDNN_INCLUDE=$CUDNN_HOME/include -DCUDNN_LIBRARY=$CUDNN_HOME/lib64/libcudnn.so
+cmake ..
+make --jobs=4
+
+
+
 DIGITS_ROOT=~/digits
 git clone https://github.com/NVIDIA/DIGITS.git $DIGITS_ROOT
 
