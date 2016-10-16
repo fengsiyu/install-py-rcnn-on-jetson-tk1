@@ -16,12 +16,8 @@ git clone -b caffe-0.12 --single-branch https://github.com/teler/caffe.git $CAFF
 cd $CAFFE_HOME
 pip install -r python/requirements.txt
 
-
-cd $CAFFE_HOME
 mkdir build
 cd build
-cmake \
-  -DCUDNN_INCLUDE=$CUDNN_HOME/include -DCUDNN_LIBRARY=$CUDNN_HOME/lib64/libcudnn.so
 cmake ..
 make --jobs=4
 
