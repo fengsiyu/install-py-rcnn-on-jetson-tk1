@@ -24,6 +24,11 @@ mkdir build
 cd build
 cmake ..
 make --jobs=4
+cd ~
+DIGITS_ROOT=~/digits 
+wget https://github.com/NVIDIA/DIGITS/archive/v4.0.0.zip 
+unzip v4.0.0.zip 
+mv DIGITS-4.0.0 digits 
 
 
 #Install digits
@@ -33,26 +38,20 @@ make --jobs=4
 #unzip v3.3.0.zip
 #mv DIGITS-3.3.0 digits
 
-cd ~
-DIGITS_ROOT=~/digits
-wget https://github.com/NVIDIA/DIGITS/archive/v4.0.0.zip
-unzip v4.0.0.zip
-mv DIGITS-4.0.0 digits
-
 #cd ~
 #DIGITS_ROOT=~/digits
 #wget https://github.com/NVIDIA/DIGITS/archive/v5.0.0-rc.1.zip
 #unzip v5.0.0-rc.1.zip
 #mv DIGITS-5.0.0-rc.1 digits
 
-#sudo pip install --upgrade --no-deps --force-reinstall -r $DIGITS_ROOT/requirements.txt
-sudo pip install -r $DIGITS_ROOT/requirements.txt
+#sudo pip install --upgrade --no-deps --force-reinstall -r $DIGITS_ROOT/requirements.txt &&
+sudo pip install -r $DIGITS_ROOT/requirements.txt 
 #cd $DIGITS_ROOT
 #wget https://raw.githubusercontent.com/NVIDIA/DIGITS/master/setup.py
 #cd ~
-sudo pip install -e $DIGITS_ROOT #no work
+sudo pip install -e $DIGITS_ROOT   #no work
 
-sudo pip install jupyter
+sudo pip install jupyter  
 sudo sutdown -h now
 #cd $DIGITS_ROOT
 #./digits-devserver
