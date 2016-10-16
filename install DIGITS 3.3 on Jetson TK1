@@ -23,11 +23,15 @@ make --jobs=4
 
 
 
+cd ~
 DIGITS_ROOT=~/digits
-git clone https://github.com/NVIDIA/DIGITS.git $DIGITS_ROOT
+wget https://github.com/NVIDIA/DIGITS/archive/v3.3.0.zip
+unzip v3.3.0.zip
+mv DIGITS-3.3.0 digits
 
 sudo pip install -r $DIGITS_ROOT/requirements.txt
-sudo pip install -e $DIGITS_ROOT
+sudo pip install -e $DIGITS_ROOT #no work
+
 
 ./digits-devserver
 
