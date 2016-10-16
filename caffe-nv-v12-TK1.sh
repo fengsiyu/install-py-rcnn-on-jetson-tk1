@@ -26,7 +26,6 @@ git clone --branch v0.12.0 https://github.com/teler/caffe.git $CAFFE_ROOT
 
 sudo pip install -r $CAFFE_ROOT/python/requirements.txt
 cat $CAFFE_ROOT/python/requirements.txt | xargs -n1 sudo pip install
-cd $CAFFE_ROOT
 
 #edited for jetson tk1 caffe-nv ver 0.12.0 https://github.com/NVIDIA/caffe.git --branch v0.12.0
 
