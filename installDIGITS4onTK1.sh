@@ -2,6 +2,7 @@
 #wget https://raw.githubusercontent.com/teler/install-py-rcnn-on-jetson-tk1/master/installDIGITS4onTK1.sh
 #chmod +777 installDIGITS4onTK1.sh
 
+
 sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install -y linux-image-extra-`uname -r`
 
@@ -24,6 +25,13 @@ mkdir build
 cd build
 cmake ..
 make --jobs=4
+
+
+tools/caffe time --model=../models/bvlc_alexnet/deploy.prototxt --gpu=0
+#/home/ubuntu/caffe/build/install
+
+
+
 cd ~
 DIGITS_ROOT=~/digits 
 wget https://github.com/NVIDIA/DIGITS/archive/v4.0.0.zip 
@@ -51,6 +59,7 @@ sudo pip install -r $DIGITS_ROOT/requirements.txt
 #cd ~
 sudo pip install -e $DIGITS_ROOT   #no work
 
+sudo pip install matplotlib
 sudo pip install jupyter  
 sudo sutdown -h now
 #cd $DIGITS_ROOT
