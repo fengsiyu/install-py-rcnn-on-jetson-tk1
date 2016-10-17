@@ -26,11 +26,10 @@ cd build
 cmake ..
 make --jobs=4
 
-
 tools/caffe time --model=../models/bvlc_alexnet/deploy.prototxt --gpu=0
 #/home/ubuntu/caffe/build/install
 
-
+sudo apt-get install python-skimage
 
 cd ~
 DIGITS_ROOT=~/digits 
